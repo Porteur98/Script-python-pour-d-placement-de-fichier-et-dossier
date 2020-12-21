@@ -209,21 +209,22 @@ def search_dir_dst():
 
     chemin = []
 
-    for home2, dirs, files in os.walk(home, topdown=True):#os.walk a 3 tuples : dirtpath, dirnames, filesnames
+    for home2, dirs, files in os.walk(home, topdown=True): #permet de parcourir tous les éléments présent dans home
+    #os.walk a 3 tuples : dirtpath, dirnames, filesnames
     #print(home2)#chemin vers le path    
     #print(dirs)#liste avec nom des sous répertoires de dirtpath
     #print(files)#liste avec nom des fichier hors répertoires dans dirtpath
 
         for element in dirs:
-            if dossier.lower() in element.lower():
-                dst = os.path.join(home2, element)
-                chemin.append(dst)
+            if dossier.lower() in element.lower(): #compare la saisie de dossier à l'élément parcouru
+                dst = os.path.join(home2, element) #on forme le chemin du dossier
+                chemin.append(dst)  #on l'ajoute dans la liste chemin ,
             
-    if len(chemin) > 1:
+    if len(chemin) > 1: # si dans la liste chemin, + de 1 chemin donc plusieur dossiers
         print("Il existe plusieurs dossiers à ce nom :\n")
-        for lechemin in chemin:
+        for lechemin in chemin: #affiche tous les chemins présent dans la liste
             print(f'{lechemin}\n')
-    elif len(chemin) == 1:
+    elif len(chemin) == 1: # si il nya que 1 seul chemin dans la liste 
         print("Il existe un dossier à ce nom là :")
         for lechemin in chemin:
             print(lechemin)
@@ -249,22 +250,22 @@ def search_dir_dst():
                 print("Mauvais choix. Refaire.\n")
 
     global chemindst
-    chemindst = chemin
+    chemindst = chemin   #on donne à la variable globale la valeur de chemin, pour que l'on puisse utilisé le "resulat" de chemin dans les autre fonctions
 
 def verif_dir_dst(dst,source,chemin):
     
 
-    dst = input("Choisir le dossier (copier/coller le chemin correspondant) :")#supprimer espace au début et à la fin de la chaine de charactère
+    dst = input("Choisir le dossier (copier/coller le chemin correspondant) :")
     ldst = []
     erreur = ""
     #print(type(dst))
         
-    for value in chemindst:
+    for value in chemindst: #on utilise la variable globale dans lequel on a insérer les valeurs de la fonction précédente
         print(value)
         print(chemindst)
-        if dst == value:#split() retourne sous forme de liste dans liste in liste = not
+        if dst == value:
             print(f'{dst} in {value}')
-            ldst.append(value)
+            ldst.append(value) #on rajoute dans ldst , value
             #
         else:
             #print(f'{dst} not in {value}')
@@ -274,14 +275,14 @@ def verif_dir_dst(dst,source,chemin):
             print(type(value))       
 
     global dstf
-    dstf = dst
+    dstf = dst   #pour la réutiliser dans d'autre fonctions
         
-    if len(ldst) == 1:
+    if len(ldst) == 1: #si ldst q'une valeur alors correspond à notre saisie, permet surtout de vérifier la saisie si elle existe bien 
         print(f'\nVoici le dossier de destination que vous avez sélectionné pour votre saisie "{dst}" ')
         for elem in ldst:
             print(elem)
         
-    elif len(ldst) == 0:
+    elif len(ldst) == 0: # si ldst 0 valuer, alors aucun dossier trouvé avec la saisie de l'user
         print(f'\nNous navons aucun document correspondant à votre saisie {dst}')                   
 
         reponseselect = ""
@@ -294,7 +295,7 @@ def verif_dir_dst(dst,source,chemin):
                 
             reponseselect = input("Choix :") 
             if reponseselect == "1":
-                if len(chemin) > 1:
+                if len(chemin) > 1: #réaffiche les dossiers existant à noms
                         print("Il existe plusieurs dossiers à ce nom :\n")
                         for lechemin in chemin:
                             print(f'{lechemin}\n')
@@ -303,7 +304,7 @@ def verif_dir_dst(dst,source,chemin):
                     for lechemin in chemin:
                         print(lechemin)
 
-                verif_dir_dst(dst,source,chemindst)
+                verif_dir_dst(dst,source,chemindst) #refait appel à la fonction pour recommencer la saisie
             elif reponseselect == "2":
                 print_tree()
                 verif_dir_dst(dst,source,chemindst)
@@ -323,9 +324,9 @@ def menu_fin():
 
         choix3 = input('\n choix :')
         
-        if choix3 == 1:
+        if choix3 == "1":
             menu()
-        elif choix3 == 2:
+        elif choix3 == "2":
             exit
         else:
             print("erreur saisie")
@@ -342,7 +343,7 @@ def print_tree():
 
         if printtree == 'oui':
             
-            while choixtree !="1" and choixtree !="2" and choixtree !="3": 
+            while choixtree !="1" and choixtree !="2" and choixtree !="3": #affiche différentes options
                    
                 print("\nQue voulez-vous faire ?: ")
                 print("1 - Afficher un arbre avec que la liste des dossiers. ")
@@ -361,7 +362,7 @@ def print_tree():
                     print("Annulation de la demande d'affichage de l'arborescence.")
                         
                 else:
-                    print("Erreur de choix, refaire.\n")
+                    print("Erreur de choix, refaire.\n") #si choix différents des caractère 1 ,2, et 3
                    
         elif printtree == "non":
             print("Non affichage de l'arborescence.")
@@ -750,7 +751,7 @@ def moove_files():
     src = ""
     dst = ""
  
-    
+    home = os.environ['HOME']
     
     c = []
 
@@ -792,7 +793,7 @@ def moove_files():
 
             for fichier2 in files:  #pour comparé avec plusieurs élément de la list files avec notre saisie dans c
                     
-                if saisie.lower().strip() not in fichier.lower().strip():#renvoie une COPIE de la chaine de caractère masi en minuscule
+                if saisie.lower().strip() not in fichier2.lower().strip():#renvoie une COPIE de la chaine de caractère masi en minuscule
                                 
                     presence2.remove(fichier2)  #supprime de la liste tous les fichiers dans lequel notre saisie dans c n'est pas dans la chaine de caractère (des fichiers supprimés)
                     #print(fichier2)
@@ -853,11 +854,11 @@ def moove_files():
    
     search_dir_dst()
 
-    verif_dir_dst(dst,source,chemindst)
+    verif_dir_dst(dst,source,chemindst) #on appelle différent parametre de valeurs précédentes
 
     print("\nListe totale de(s) fichier(s) à déplacer : ")
 
-    for key, value in varld4.items():
+    for key, value in varld4.items(): # affiche la liste totale des fichiers à déplacer , val
         print(f'{value}')
 
     
@@ -897,13 +898,13 @@ def remove():
     #c = input('écrire le nom du fichier :').split(",")
     #c = "maison.txt" 
 
-    c = input('écrire les noms des fichiers :').split(",")
+    c = input('écrire les noms des fichiers à supprimer :').split(",")
     
     #path.exists()
 
      
     lf = {}    
-    files2 = []
+    
     source = {}
     presence2 = []
     #chemin = glob.glob(f'/home/porteur/**/*{c}*', recursive=True)
@@ -1110,7 +1111,7 @@ def scp():
         
         user = input("nom de l'user :")
         ip = input("ip : ")
-        chemin = input("chemin :")
+        chemin = input("chemin du dossier de destination:")
 
         
         for saisie in lf:
