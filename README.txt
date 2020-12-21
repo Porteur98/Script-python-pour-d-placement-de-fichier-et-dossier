@@ -1,5 +1,8 @@
 # Script-python-pour-d-placement-de-fichier-et-dossier
 
+ATTENTION: Il s'agit d'un script non terminé. Il peut permettre d'effectué les différentes demandes possibles mais à condition de ne faire aucune faute de frappe, d'espace, etc.
+           Le code est surtout optimisé au niveau du déplacement de fichier et de dossier.
+          
 Il s'agit d'un script python proposant à travers un menu de faire différentes gestions de fichiers et dossiers sur votre ordinateur local ou vers un poste distant. 
 Le script a été fait pour la gestion de fichier ou dossier sur LINUX. Il est possible après de le modifier pour du Windows. 
 L'intérêt du script a surtout été plus travaillé sur le déplacement de fichier et dossier dans son répertoire local. Cependant il y'a d'autre options en plus dans le menu (omme supprimer des fichiers ou faire une syncro de répertoire/dossier vers un autre poste) qui sont moins travaillés niveau développement. 
