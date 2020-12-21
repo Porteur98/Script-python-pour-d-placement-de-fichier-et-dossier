@@ -1,7 +1,7 @@
 # Script-python-pour-d-placement-de-fichier-et-dossier
 
 ATTENTION: Il s'agit d'un script non terminé. Il peut permettre d'effectué les différentes demandes possibles mais à condition de ne faire aucune faute de frappe, d'espace, etc.
-Le code est surtout optimisé au niveau du déplacement de fichier et de dossier.
+Le code est surtout beaucoup plus optimisé au niveau du déplacement de fichier et de dossier, mais n'est pas parfait.
 
 CE QUI RESTE A AMELIORER : 
 - Possibilité de supprimer des dossiers.
