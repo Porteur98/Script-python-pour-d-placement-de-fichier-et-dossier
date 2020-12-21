@@ -22,39 +22,37 @@ La recherche des fichiers et des dossiers se font sur votre répertoire personne
 
 EXEMPLE : 
 
-  Contexte : 
-    Vous avez plusieurs fichiers "jean" : jean1.txt, jean2.txt, jean3.txt, jeandelafontaine, etc.
-    Ils sont situés dans des dossiers différents : jean1.txt, jean2.txt dans dossier PrénomJean.
+Contexte : 
+Vous avez plusieurs fichiers "jean" : jean1.txt, jean2.txt, jean3.txt, jeandelafontaine, etc.
+Ils sont situés dans des dossiers différents : jean1.txt, jean2.txt dans dossier PrénomJean.
                                                    jean3.txt dans dossier Images. 
                                                    jeandelafontaine dans dossier Bureau. 
-
-    De plus, vous ne savez pas à la base où se trouve tous ces fichiers et vous souhaitez déplacer vos fichiers dans le dossier de destination "DossierPrénom".
+De plus, vous ne savez pas à la base où se trouve tous ces fichiers et vous souhaitez déplacer vos fichiers dans le dossier de destination "DossierPrénom".
     
     
-   Que permet le script ? 
+Que permet le script ? 
       
-      Le script peut vous permettre de chercher tous les fichiers contenant la chaine de caractère "jean".
+Le script peut vous permettre de chercher tous les fichiers contenant la chaine de caractère "jean".
       
-      Ainsi il vous affiche tous les fichiers présent sur votre HOME avec cette chaine : jean1.txt, jean2.txt, jean3.txt, jeandelafontaine
+Ainsi il vous affiche tous les fichiers présent sur votre HOME avec cette chaine : jean1.txt, jean2.txt, jean3.txt, jeandelafontaine
       
-      Cependant, il se pourrait que vous ne soyez intéresser que par certain de ces fichiers. 
+Cependant, il se pourrait que vous ne soyez intéresser que par certain de ces fichiers. 
       
-      Admettant vous ne voulez déplacer que les .txt, le script va vous demander de saisir les fichiers qui vous intéresse.
+Admettant vous ne voulez déplacer que les .txt, le script va vous demander de saisir les fichiers qui vous intéresse.
      
-      Il suffit d'écrire juste ".txt" afin de sélectionner les fichiers avec l'extension .txt. Après en fonction des fichiers que vous avez, il est libre à vous de sélectionner       la chaine de caractère que vous souhaitez. La seule condition est qu'il faut que un fichier possède cette chaine de caractère saisie.
+Il suffit d'écrire juste ".txt" afin de sélectionner les fichiers avec l'extension .txt. Après en fonction des fichiers que vous avez, il est libre à vous de sélectionner       la chaine de caractère que vous souhaitez. La seule condition est qu'il faut que un fichier possède cette chaine de caractère saisie.
       
-      Une fois que vous avez saisie les fichiers que vous souhaitez, il faut saisir le nom d'un dossierde destination pour déplacer vos fichiers. 
+Une fois que vous avez saisie les fichiers que vous souhaitez, il faut saisir le nom d'un dossierde destination pour déplacer vos fichiers. 
       
-      Dans ce cas là, écrivez le nom d'un dossier que vous avez en tête sinon, juste avant la demande de saisie du nom de dossier de destination, on vous propose d'afficher une       arborescence de votre répertoire personnelle si vous désirez voir les différents dossiers existants.
+Dans ce cas là, écrivez le nom d'un dossier que vous avez en tête sinon, juste avant la demande de saisie du nom de dossier de destination, on vous propose d'afficher une       arborescence de votre répertoire personnelle si vous désirez voir les différents dossiers existants.
       
-      Vous saississez comme nom de dossier de destination "DossierPrénom", le script vous affiche ensuite le(s) chemin(s) du(es) dossier(s) trouvé contenant la chaine de               caractère "DossierPrénom" ou non (dan ce cs il va vous demander de ressaisir à nouveau un nom). Il se peut que vous avez plusieurs dossiers avec la même chaine de               caractère. tout comme à l'image des fichiers jean, le script vous affichera le chemin de tous les dossiers trouvé mais il se suffira juste ici de copier/coller le chemin         du dossier qui vous intéresse.
+Vous saississez comme nom de dossier de destination "DossierPrénom", le script vous affiche ensuite le(s) chemin(s) du(es) dossier(s) trouvé contenant la chaine de              caractère "DossierPrénom" ou non (dan ce cs il va vous demander de ressaisir à nouveau un nom). Il se peut que vous avez plusieurs dossiers avec la même chaine de               caractère. tout comme à l'image des fichiers jean, le script vous affichera le chemin de tous les dossiers trouvé mais il se suffira juste ici de copier/coller le chemin         du dossier qui vous intéresse.
       
-      Le script vous listera la liste des fichiers que vous souhaitez déplacer puis vous demandera de valider "oui" ou "non" pour le déplacement jusqu'à "DossierPrénomé". 
+Le script vous listera la liste des fichiers que vous souhaitez déplacer puis vous demandera de valider "oui" ou "non" pour le déplacement jusqu'à "DossierPrénomé". 
       
-      Une fois ceci effectué, vous retournez au menu du script. 
+Une fois ceci effectué, vous retournez au menu du script. 
       
-      
-    
+   
 II- Supprimer des fichiers.
 
 Vous pourrez ici saisir tout simplement les noms de fichiers à rechercher sur votre HOME pour ensuite le supprimer. Comme expliqué plus haut concernant les fichiers de même noms (ou non) situé dans dans endroits différents, cela peut-être utile. 
