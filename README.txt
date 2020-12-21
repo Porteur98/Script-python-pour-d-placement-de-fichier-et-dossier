@@ -16,6 +16,7 @@ I - Déplacer des fichier ou dossiers :
 
 Vous pourrez à travers cette option, déplacer un ou plusieurs fichiers ou documents d'un dossier A à un dossier B. 
 Cela est surtout utile quand vous avez plusieurs fichiers ou dossiers séparés dans d'autres dossier de votre ordinateur. 
+La recherche des fichiers et des dossiers se font sur votre répertoire personnel, soit votre HOME.
 
 EXEMPLE : 
 
@@ -26,6 +27,16 @@ EXEMPLE :
                                                    jeandelafontaine dans dossier Bureau. 
 
     De plus, vous ne savez pas à la base où se trouve tous ces fichiers. 
+    
+    
+   Que permet le script ? 
+      
+      Le script peut vous permettre de chercher tous les fichiers contenant la chaine de caractère "jean".
+      Ainsi il vous affiche tous les fichiers présent sur votre HOME avec cette chaine : jean1.txt, jean2.txt, jean3.txt, jeandelafontaine
+      Cependant, il se pourrait que vous ne soyez intéresser que par certain de ces fichiers. 
+      Admettant vous ne voulez déplacer que les .txt, le script va vous demander 
+      
+      
     
 
                                              
