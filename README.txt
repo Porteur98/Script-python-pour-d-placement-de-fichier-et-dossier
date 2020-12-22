@@ -10,6 +10,9 @@ CE QUI RESTE A AMELIORER ET A FAIRE :
 - Possibilité de supprimer des dossiers. 
 - Amélioration du code pour les parties Suppression, ssh, et synchro.
 - Régler certains détails comme des while manquant pour les mauvais choix etc. 
+- Dans la gestion des dossiers/fichiers, rajouter plus de chose : renommer, trier, …
+- Faire une sauvegarde des fichiers/dossiers supprimés pendant X temps.
+
 
 
           
