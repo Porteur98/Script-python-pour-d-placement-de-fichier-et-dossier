@@ -3,10 +3,16 @@
 ATTENTION: Il s'agit d'un script non terminé. Il peut permettre d'effectué les différentes demandes possibles mais à condition de ne faire aucune faute de frappe, d'espace, etc.
 Le code est surtout beaucoup plus optimisé au niveau du déplacement de fichier et de dossier, mais n'est pas parfait.
 
-CE QUI RESTE A AMELIORER : 
+CE QUI RESTE A AMELIORER ET A FAIRE : 
 - Possibilité de supprimer des dossiers.
 - Copier/déplacer des dossiers. 
 - Synchroniser mais avec plus d'options, notamment le système de "include" ou "exclude". 
+- Faire un fichier log pour toute les opérations qui sont effectués. 
+- Connexion ssh : fichier à part avec toutes les informations du poste distant. 
+- Possibilité de supprimer des dossiers. 
+- Amélioration du code pour les parties Suppression , ssh, et synchro.
+- Régler certains détails comme des while manquant pour les mauvais choix etc. 
+
 
           
 EXPLICATION:         
