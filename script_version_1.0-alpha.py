@@ -1,6 +1,6 @@
 #!/usr/bin/python3.7
 # -*-coding:Utf-8 -*
-# version 1.0
+# version 1.0-alpha
 
 import datetime, time
 import os, shutil, sys, glob
