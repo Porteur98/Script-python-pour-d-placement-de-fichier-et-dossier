@@ -867,8 +867,9 @@ def moove_files():
         repfile = input(f'Êtes-vous sûr de vouloir déplacer le(s) fichier(s) suivant(s) à {dstf} ? (oui ou non):')
         if repfile == 'oui':       
             for saisie in varactu:
+                print(varactu)
                 for key,value in source.items():
-                    if saisie.strip() in key.strip():
+                    if saisie.strip() in key.strip(): # supprime les espaces au début et à la fin de la chaine de caractère key
                         shutil.move(value, dstf)
                         print(f'\nLe fichier {key} a été déplacé de {value} à {dstf}')
         elif repfile == "non":
@@ -884,7 +885,6 @@ def moove_files():
     
 def remove():
        
-    
     src = ""
     dst = ""
     
@@ -898,7 +898,7 @@ def remove():
     #c = input('écrire le nom du fichier :').split(",")
     #c = "maison.txt" 
 
-    c = input('écrire les noms des fichiers à supprimer :').split(",")
+    c = input('écrire les noms des fichiers à supprimer :').split(", ")#saisie des chaines de caractère des nom à trouver, ajouté dans une ligne dans laquelle on ignore les ", "
     
     #path.exists()
 
@@ -934,14 +934,14 @@ def remove():
                     
                 if saisie.lower().strip() not in fichier2.lower().strip():#renvoie une COPIE de la chaine de caractère masi en minuscule
                                 
-                    presence2.remove(fichier2)  
+                    presence2.remove(fichier2)  #on supprime de la liste si ne correspant pas.
                     #print(fichier2)
                 else:
                                             
-                    src = os.path.join(home2, fichier2)
-                    source[fichier2] = src
+                    src = os.path.join(home2, fichier2) #on forme le chemin du fichier
+                    source[fichier2] = src #on l'ajoute dans le dcitonnaire le chemin
                         
-                    lf[saisie].append(fichier2)
+                    lf[saisie].append(fichier2) #on ajoute dans le dictionnaire ce qui correspondat à notre saisie
                     #lf2[f'{test22}'].append(fichier2)
                     #test22 += 1
                     #print(lf)
@@ -952,7 +952,7 @@ def remove():
         print(elemlf)'''
 
     for key, value in lf.items():
-        if len(value) > 1:
+        if len(value) > 1: # si valeurs (fichiers trouvés) de la clé en cours (saisie) est supérieur à 1, alors plusieurs fichier
             print(f'il existe plusieurs fichiers correspondant à {key} : {value}, {len(value)}')
               
         elif len(value) == 1:
@@ -989,8 +989,6 @@ def remove():
                     #print(files2)
 
                     
-                 
-
                 for fichier2 in files:  #pour comparé avec plusieurs élément de la list files
                     
                     if saisie.lower().strip() not in fichier2.lower().strip():#renvoie une COPIE de la chaine de caractère masi en minuscule
@@ -1002,21 +1000,21 @@ def remove():
                         #test = os.path.join(home2, fichier2)
                         #source[fichier2] = src
                         
-                        lf34[saisie].append(fichier2)
+                        lf34[saisie].append(fichier2)#ajout dans le dictionnaire du fichier qui existe
                         #lf2[f'{test22}'].append(fichier2)
                         #test22 += 1
-                        #print(lf)
-                        #print(premier)
 
     #print(lf34)
-        
+
+
+    #partie à revoir     
     for key, value in lf34.items():
-        if len(lf34[key]) > 0:
+        if len(lf34[key]) > 0: # si dans la clé, il y'a au moins une valeurs, alors au moins un fichier trouvés et saisie vérifier
             print(f'fichier existe bien pour saisie {key} : {value}')
         else:
             print(f'soucis avec {key}')
 
-    question = input(f'Êtes-vous sûr de vouloir supprimer le(s) fichier(s) suivant(s) : {lf34.values()}')
+    question = input(f'Êtes-vous sûr de vouloir supprimer le(s) fichier(s) suivant(s) : {lf34.values()} (oui ou non)')
     
     if question ==  'oui':   
         for saisie in actuelle:
@@ -1045,7 +1043,7 @@ def scp():
     #c = input('écrire le nom du fichier :').split(",")
     #c = "maison.txt" 
 
-    c = input('écrire les noms des fichiers :').split(",")
+    c = input('écrire les noms des fichiers (séparer par ", ") :').split(",")
     
     #path.exists()
 
@@ -1121,6 +1119,9 @@ def scp():
     
     else:
         print(f'Il nya pas de fichier à ce nom là')
+
+    
+    menu_fin()
 
 def synchro():
     print("Ecrire les informations nécessaires pour la synchronisation de ce que vous souhaitez")
